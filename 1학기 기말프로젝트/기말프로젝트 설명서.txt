@@ -1,0 +1,37 @@
+기말프로젝트
+20143085   이대현
+
+프로젝트파일을 통채로 압축해서 올렸다.
+
+1.student.db  파일
+
+*이름/학번/성적 순으로 저장된다
+*feof함수로 마지막을 봐야해서 성적이 나오고 뒤에 한칸을 뛰어쓴다
+
+2.myheader.h  파일
+
+*c파일 2개로 짠것을 이어주기 위해 만든 여러가지 함수를 써놓았다
+
+3.menu.c 파일
+
+*포인터배열 구조체로 100개를 만들었다
+*main함수 안에 무한루프를 만들어놓고 메뉴를 통해 종료하면 무한루프를 빠져나오게 된다
+*메뉴의 옵션하나당 한가지 함수로 돌아가고 나머지는 화면을 지워주는데 쓰인다
+
+4.function.c 파일
+
+*메뉴를 통해 쓰여질 함수들을 만들어논 파일이다
+void inputstudent(FILE *ip)    ->    파일에서 정보를 읽어오는 함수이다
+int compareid(const void *a, const void *b)    ->  qsort함수를 쓸때 들어가는 비교부분에 쓰일 학번을 비교하는 함수이다, qsort하면 학번이 낮은순으로 정리된다
+int comparescore(const void *a, const void *b)   ->  qsort함수를 쓸때 들어가는 비교부분에 쓰일 점수을 비교하는 함수이다, qsort하면 점수가 낮은순으로 정리되고 점수가 같으면 이름순으로 정리된다
+int comparename(const void *a, const void *b)  ->  qsort함수를 쓸때 들어가는 비교부분에 쓰일 이름을 비교하는 함수이다, qsort하면 이름순으로 정리된다
+void printstudent()   ->  프로그램에 정보를 출력하는 함수이다
+void idprint()    ->   정보를 읽고 학번순으로 정렬해서 프로그램에 출력하는 함수이다
+void nameprint()    ->  정보를 읽고 이름순으로 정렬해서 프로그램에 출력하는 함수이다
+void scoreprint()   ->  정보를 읽고 점수순으로 정렬해서 프로그램에 출력하는 함수이다
+void fprintstudent()  ->  수정이나 추가할때 db파일에 써주는 함수이다
+void fprintstudent2()  -> 삭제할떄 db파일에 써주는 함수이다
+void addstudent()    ->  정보를 읽고  추가할 학생을 파일에써주는 함수이다
+void deletestudent()  -> 정보를 읽고  제거할 학생을 없애고 파일에 써주는 함수이다
+void changestudent()  -> 정보를 읽고  바꿀 학생을 바꾸고 파일에 써주는 함수이다
+

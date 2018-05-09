@@ -1,0 +1,13 @@
+void inputstudent(FILE *ip);
+int compareid(const void *a, const void *b);
+int comparescore(const void *a, const void *b);
+int comparename(const void *a, const void *b);
+void printstudent();
+void idprint();
+void nameprint();
+void scoreprint();
+void addstudent();
+void fprintstudent();
+void deletestudent();
+void changestudent();
+void fprintstudent2();
